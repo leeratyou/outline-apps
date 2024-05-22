@@ -85,7 +85,7 @@
   self.statusItem.button.action = @selector(togglePopover);
   [self setAppIcon:@"StatusBarButtonImage"];
   self.popover = [[NSPopover alloc] init];
-  self.popover.behavior = NSPopoverBehaviorTransient;
+  self.popover.behavior = NSPopoverBehaviorApplicationDefined;
   self.popover.contentViewController = [[NSViewController alloc] initWithNibName:@"MainViewController"
                                                                           bundle:[NSBundle mainBundle]];
   self.popover.contentViewController.view = self.window.contentView;
